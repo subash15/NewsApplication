@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NewsApplication</string>
+
+
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title"> World News </string>
+    <string name="slide_1_desc">Latest National and International news on your Palm</string>
+
+    <string name="slide_2_title">Economics News</string>
+    <string name="slide_2_desc"> Know about the world Economics , share and  Money Market</string>
+
+    <string name="slide_3_title">Sports News</string>
+    <string name="slide_3_desc"> Live Sports News and Streaming </string>
+
+    <string name="slide_4_title">Entertaintment</string>
+    <string name="slide_4_desc"> Know Movies updates celebrities gossips news  </string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>

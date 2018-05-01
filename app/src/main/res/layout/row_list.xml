@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/news_headline_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/title_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News Title"
+            android:typeface="monospace"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/title_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is first news of today nepali plane crashed in airport bla bla...."
+            android:textSize="15sp"
+            android:typeface="normal"
+            />
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="subash khadka"
+            android:gravity="left"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="12 th janurary 2018"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
