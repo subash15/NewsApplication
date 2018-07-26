@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 import mynewsapp.subash.com.newsapplication.R;
 import mynewsapp.subash.com.newsapplication.mvp.model.Article;
 import mynewsapp.subash.com.newsapplication.mvp.model.NewsItem;
@@ -57,8 +58,8 @@ public class NewsPortalListActivity extends AppCompatActivity implements ApiInte
         Realm realm = Realm.getDefaultInstance();
         realm.beginTransaction();
 
-        List<Article> articles = items.getArticles();
-
+        /*List<Article> articles = items.getArticles();
+*/
 
       /* for (int i =0 ; i < articles.size() ; i++)
        {
@@ -77,7 +78,7 @@ public class NewsPortalListActivity extends AppCompatActivity implements ApiInte
 
            Toast.makeText(this , " Uri found" , Toast.LENGTH_SHORT).show();
        }*/
-        for (int i = 0; i < articles.size(); i++) {
+  /*      for (int i = 0; i < articles.size(); i++) {
 
             Article article = realm.createObject(Article.class);
             article.setTitle(article.getTitle());
@@ -88,9 +89,11 @@ public class NewsPortalListActivity extends AppCompatActivity implements ApiInte
             article.setSource(article.getSource());
             article.setUrlToImage(article.getUrlToImage());
         }
-        realm.insertOrUpdate(articles);
+  */    realm.insertOrUpdate(items);
+        realm.commitTransaction();
+        RealmResults<NewsItem> newsItems = realm.where(NewsItem.class).findAll();
+        Log.d(TAG, "savingDataOffline: "+newsItems.get(0).getArticles().get(0).getTitle());
         NewsProvider newsProvider = new NewsProvider(this, items);
-
 
     }
 
