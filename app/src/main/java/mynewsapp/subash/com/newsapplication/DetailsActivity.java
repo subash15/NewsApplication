@@ -1,14 +1,11 @@
 package mynewsapp.subash.com.newsapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.webkit.WebChromeClient;
+import android.util.Log;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 /**
  * Created by Crazyartist on 3/13/2018.
@@ -20,15 +17,21 @@ public class DetailsActivity extends AppCompatActivity {
     ProgressBar loader;
     String url = "";
 
+
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        Intent intent = getIntent();
-        url = intent.getStringExtra("url");
+
+        url = getIntent().getStringExtra("url");
+        Log.d("url",url);
+        Toast.makeText(this,url,Toast.LENGTH_LONG).show();
         loader = findViewById(R.id.webView_loader);
         webView = findViewById(R.id.webView);
+
+
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(false);
@@ -36,7 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
         webView.getSettings().setAppCacheEnabled(true);
         webView.loadUrl(url);
 
-        webView.setWebChromeClient(new WebChromeClient() {
+      /*  webView.setWebChromeClient(new WebChromeClient() {
             public void onProgressChanged(WebView view, int progress) {
                 if (progress == 100) {
                     loader.setVisibility(View.GONE);
@@ -44,7 +47,8 @@ public class DetailsActivity extends AppCompatActivity {
                     loader.setVisibility(View.VISIBLE);
                 }
             }
-        });
+        });*/
+
 
     }
 

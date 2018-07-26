@@ -14,8 +14,8 @@
 
     <ImageView
         android:id="@+id/news_headline_image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher" />
 
@@ -50,12 +50,29 @@
             android:text="subash khadka"
             android:gravity="left"/>
         <TextView
-            android:id="@+id/time"
+            android:id="@+id/published_At"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="12 th janurary 2018"
             />
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="source"
+            />
+        <TextView
+            android:id="@+id/url_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="image_link"
+            />
+        <TextView
+            android:id="@+id/news_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="news_link"/>
 
     </LinearLayout>
 

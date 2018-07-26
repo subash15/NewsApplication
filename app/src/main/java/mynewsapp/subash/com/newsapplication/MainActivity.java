@@ -97,12 +97,14 @@ public class MainActivity extends AppCompatActivity {
                 adapter = new ListNewsAdapter(MainActivity.this, datalist);
 
                 listNews.setAdapter(adapter);
+
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+/*                        Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
                         intent.putExtra("url", datalist.get(+position).get(KEY_URL));
-                        startActivity(intent);
+                        MainActivity.this.startActivity(intent);*/
+                        loadActivity(datalist.get(position).get(KEY_URL));
                     }
                 });
 
@@ -113,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    private void loadActivity(String s) {
+        Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+        intent.putExtra("url",s);
+        startActivity(intent);
     }
 
 }
