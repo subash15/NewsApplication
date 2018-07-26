@@ -15,10 +15,11 @@ public  final  class ContentProviderContract {
     public static final Uri CONTENT_URI =
             Uri.parse("content://" + AUTHORITY);
 
-    public static final String TABLE_NEWS = "news";
 
 
     public static final class TaskColumns implements BaseColumns {
+
+        public static final String TABLE_NEWS = "news";
         //Task ID
        // public static final String _ID = "newsId";
         public static final String NEWS_TITLE = "title";

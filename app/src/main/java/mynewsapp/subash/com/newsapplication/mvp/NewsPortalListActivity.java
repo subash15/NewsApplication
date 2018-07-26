@@ -89,7 +89,9 @@ public class NewsPortalListActivity extends AppCompatActivity implements ApiInte
             article.setSource(article.getSource());
             article.setUrlToImage(article.getUrlToImage());
         }
-  */    realm.insertOrUpdate(items);
+  */
+
+  realm.insertOrUpdate(items);
         realm.commitTransaction();
         RealmResults<NewsItem> newsItems = realm.where(NewsItem.class).findAll();
         Log.d(TAG, "savingDataOffline: "+newsItems.get(0).getArticles().get(0).getTitle());

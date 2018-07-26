@@ -19,7 +19,7 @@ import mynewsapp.subash.com.newsapplication.mvp.model.Article;
 import mynewsapp.subash.com.newsapplication.mvp.model.NewsItem;
 
 
-public class NewsProvider extends ContentProvider {
+public class NewsProvider extends ContentProvider  {
 
 
     public static final int TASK = 1;  // flag for the News data
@@ -29,11 +29,12 @@ public class NewsProvider extends ContentProvider {
     static final String URL = "content://" + PROVIDER_NAME + "/news";
     static final Uri CONTENT_URI = Uri.parse(URL);
     private static final String TAG = NewsProvider.class.getSimpleName();
+    private  Realm realm;
 
     static {
 
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(ContentProviderContract.AUTHORITY, ContentProviderContract.TABLE_NEWS, TASK);
+        uriMatcher.addURI(ContentProviderContract.AUTHORITY, ContentProviderContract.TaskColumns.TABLE_NEWS, TASK);
 /*
         uriMatcher.addURI(ContentProviderContract.AUTHORITY ,ContentProviderContract.TABLE_NEWS +"/#" , TASK_ID);
 */
