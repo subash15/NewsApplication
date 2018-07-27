@@ -33,7 +33,8 @@
         <provider
             android:name=".mvp.NewsProvider"
             android:authorities="mynewsapp.subash.com.newsapplication.mvp.NewsProvider"
-            android:enabled="true" />
+            android:enabled="true"
+            android:syncable="true"/>
 
     </application>
 
