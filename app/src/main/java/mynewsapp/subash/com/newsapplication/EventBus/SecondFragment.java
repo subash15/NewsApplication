@@ -18,6 +18,7 @@ public class SecondFragment extends Fragment {
 
   private TextView  fragmentSecondTextview;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
