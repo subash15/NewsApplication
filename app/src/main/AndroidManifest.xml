@@ -23,19 +23,22 @@
         <activity android:name=".mvp.DetailActvity" />
         <activity android:name=".mvp.NewsPortalListActivity" />
         <activity android:name=".mvp.ListNewsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider
             android:name=".mvp.NewsProvider"
             android:authorities="mynewsapp.subash.com.newsapplication.mvp.NewsProvider"
             android:enabled="true"
-            android:syncable="true"/>
+            android:syncable="true" />
 
+        <activity android:name=".EventBus.EventBusActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

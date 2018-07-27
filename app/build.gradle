@@ -53,4 +53,7 @@ dependencies {
 
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation 'com.github.bumptech.glide:glide:3.6.0'
+// otto Green Robot Bus dependency
+   implementation 'org.greenrobot:eventbus:3.0.0'
 }
+
